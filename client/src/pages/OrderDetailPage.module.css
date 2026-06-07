@@ -1,0 +1,136 @@
+.back { font-size: 0.875rem; color: var(--primary); font-weight: 500; }
+.back:hover { text-decoration: underline; }
+
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.stepDot {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  z-index: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stepDone { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.stepLabel { font-size: 0.75rem; color: var(--text-muted); text-align: center; white-space: nowrap; }
+
+.stepLine {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.stepLineDone { background: var(--primary); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card:last-child { margin-bottom: 0; }
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.item:last-child { border-bottom: none; }
+
+.itemImg {
+  width: 52px; height: 52px;
+  background: var(--section-bg);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.itemImg img { width: 100%; height: 100%; object-fit: cover; }
+.itemName { flex: 1; font-size: 0.9rem; font-weight: 500; }
+.itemQty { font-size: 0.85rem; color: var(--text-muted); }
+.itemPrice { font-weight: 700; color: var(--primary); min-width: 80px; text-align: right; }
+
+.address { font-size: 0.9rem; line-height: 1.8; color: var(--text-muted); }
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  padding: 0.45rem 0;
+}
+
+.totalRow {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.payInfo {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.payLabel { font-weight: 600; color: var(--text); }
