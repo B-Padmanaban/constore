@@ -10,21 +10,7 @@ connectDB();
 
 const app = express();
 
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-  'https://theconstore.in/',
-  'http://localhost:5173',
-].filter(Boolean);
-
-app.use(cors({
-  origin: (origin, callback) => {
-    // allow requests with no origin (mobile apps, curl)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) return callback(null, true);
-    callback(new Error('Not allowed by CORS'));
-  },
-  credentials: true,
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
